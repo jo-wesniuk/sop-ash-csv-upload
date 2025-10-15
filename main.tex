@@ -1,0 +1,46 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Pakete ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}       % Für Bilder/Screenshots
+\usepackage{enumitem}       % Für flexible Listen
+\usepackage{hyperref}       % Für klickbare Referenzen
+\usepackage{geometry}       % Seitenränder anpassen
+\geometry{margin=2.5cm}
+\usepackage{url}
+
+% --- Metadaten (einfach anpassbar) ---
+\newcommand{\SOPTitel}{Upload csv-Liste auf NAHIMA}
+\newcommand{\SOPNummer}{SOP-001}
+\newcommand{\SOPVersion}{1.0}
+\newcommand{\SOPAutor}{Joanna Wesniuk}
+\newcommand{\SOPDatum}{\today}
+
+% --- Dokument ---
+\begin{document}
+
+% Titelblatt
+\begin{center}
+    \Huge \textbf{Standard Operating Procedure (SOP)} \\
+    \vspace{0.5cm}
+    \Large \SOPTitel \\
+    \vspace{1cm}
+    \normalsize
+    Dokumentennummer: \SOPNummer \\
+    Version: \SOPVersion \\
+    Erstellt am: \SOPDatum \\
+    Autor: \SOPAutor \\
+\end{center}
+
+\newpage
+
+% Inhaltsverzeichnis
+\tableofcontents
+\newpage
+
+% --- Importiere eigentlichen Inhalt ---
+\input{SOP_upload.tex}
+
+\end{document}

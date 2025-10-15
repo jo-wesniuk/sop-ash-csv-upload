@@ -1,0 +1,78 @@
+\section{Zweck}
+Dieses SOP ist eine Anleitung für den Upload einer csv-Liste mit inventarisierten Objekten der Anatomischen Sammlung der Haustiere, die im Rahmen des Projektes der Anatomischen Sammlung der Haustiere (ASH) in der Gruppe Tierphysiologie am Departament für Umweltsystemwissenschaften (D-USYS) an der ETH  erstellt wurde, auf die Platform NAHIMA.
+
+\section{Verfahren}
+Schritt-für-Schritt-Anleitung:
+Dieses Dokument beschreibt den Ablauf zum Hochladen und Aktualisieren der aktuellen Inventarisierungsliste auf die öffentliche Platform NAHIMA.
+
+\section{Anwendungsbereich}
+Gilt für alle Mitwirkenden, die an der weiteren Inventarisierung der ASH arbeiten und für das Datenmanagment sowie deren Veröffentlichung zuständig sind.
+
+\section{Verantwortlichkeiten}
+\begin{itemize}
+    \item Durchführung: Hilfsassistenten
+    \item Überprüfung: Projektleitung  
+    \item Freigabe: Gruppenleitung
+\end{itemize}
+
+\section{Materialien und Voraussetzungen}
+\begin{itemize}
+    \item Gültiges Login zu NAHIMA
+    \item Zugang zum \texttt{\url{green_groups_tph_public}} Server
+    \item Excel-Liste bzw. \texttt{csv} Liste mit der vorgegebenen Struktur
+    %\item \texttt{.json} Datei mit den Mapping-Einstellungen
+\end{itemize}
+
+\section{Verfahren}
+
+\subsection{Dokumente Vorbereiten}
+\begin{enumerate}
+    \item Öffne die Excel-Liste vom Server unter \texttt{\url{/hest.nas.ethz.ch/green_groups_tph_public/08_Projects/803_Project_Sammlung}}.
+    \item Exportiere die Liste als \texttt{.csv} Datei und benenne sie mit dem aktuellen Datum.
+    \item Öffne die neue Datei.
+     \item Lösche die erste Zeile sowie alle grünen Spalten. Diese werden für das Upload nicht benötigt.
+     \item Speichere die Liste wieder als .csv Datei.
+\end{enumerate}
+
+\subsection{Hochladen auf NAHIMA}
+\begin{enumerate}
+    \item Starte die Python-Umgebung mit dem Kommando \texttt{source inventar\_venv/bin/activate}.
+    \item Führe das Skript \texttt{som\_training.py} aus.
+    \item Überprüfe die Clusterkomposits in der generierten Abbildung.
+\end{enumerate}
+
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{}
+\end{center}
+
+\section{Sicherheits- und Qualitätsaspekte}
+Stelle sicher, dass alle Eingabedaten korrekt formatiert sind.  
+Fehlerhafte Dateien können die SOM-Clusterbildung verfälschen.
+
+\section{Dokumentation}
+\subsection{Ablageort}
+Die Dateien zu diesem Prozess befinden sich auf dem ETH-Server unter:  
+\url{/hest.nas.ethz.ch/green_groups_tph_public/08_Projects/803_Project_Sammlung}
+
+\subsection{Zugriff und Berechtigungen}
+Der Zugriff erfolgt über den Gruppenlaufwerkspfad 
+\texttt{green\_groups\_tph\_public}, der für alle Mitglieder der Forschungsgruppe \emph{Tierphysiologie} mit Leserechten verfügbar ist.  Der Zugriff ist nur möglich, wenn man mit einem ETH-Netzwerk oder ausserhalb der ETH mit dem VPN verbunden ist.
+
+\subsection{Langzeitverfügbarkeit}
+Um sicherzustellen, dass auch nach Ausscheiden der Autorin der Zugriff bestehen bleibt:
+\begin{itemize}
+    \item Der gesamte Projektordner ist Teil des zentralen ETH-Gruppenlaufwerks mit Backup.
+    \item Alle Dateien sind mit einem README versehen, das Zweck, Erstellungsdatum und verantwortliche Person enthält.
+    \item Die Dokumentation ist verfügbar unter 
+\end{itemize}
+
+\subsection{Metadaten und Kontakt}
+\begin{itemize}
+    \item \textbf{Erstellerin:} Joanna Wesniuk, ETH Zürich (bis 2026)
+    \item \textbf{Projekt:} Anatomische Sammlung der Haustiere
+    \item \textbf{Langzeitkontakt:} susanne.ulbrich@usys.ethz.ch
+    \item \textbf{Projektleiter:} Florian Trepp
+\end{itemize}
+
+
